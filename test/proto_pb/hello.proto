@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package hello_proto;
+
+message HelloReq
+{
+    string sid = 1;
+    int32 loginId = 2;
+    string info = 3;
+
+    enum Uri
+    {
+        PLACEHOLDER = 0;
+        URI = 31590; //(123 << 8 | 102);
+    }
+}
+
+message HelloRsp
+{
+    int32 retCode = 1;
+    string sid = 2;
+    int32 loginId = 3;
+    string info = 4;
+
+    enum Uri
+    {
+        PLACEHOLDER = 0;
+        URI = 31591; //(123 << 8 | 103);
+    }
+}
+
+
